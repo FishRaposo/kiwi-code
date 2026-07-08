@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Zoo Code",
+		"name": "Kiwi Code",
 		"description": "Целая команда ИИ-разработчиков в вашем редакторе."
 	},
 	"number_format": {
@@ -150,8 +150,8 @@
 		"auto_import_failed": "Не удалось автоматически импортировать настройки ZooCode: {{error}}",
 		"rooHistoryImport": {
 			"nothingFound": "История задач Roo Code для импорта из {{domain}} не найдена.",
-			"alreadyImported_one": "{{count}} история задач Roo Code уже импортирована в Zoo Code.",
-			"alreadyImported_other": "Все {{count}} истории задач Roo Code уже импортированы в Zoo Code."
+			"alreadyImported_one": "{{count}} история задач Roo Code уже импортирована в Kiwi Code.",
+			"alreadyImported_other": "Все {{count}} истории задач Roo Code уже импортированы в Kiwi Code."
 		}
 	},
 	"info": {
@@ -173,8 +173,8 @@
 			"signInUnavailable": "Вход в Roo Code Cloud сейчас недоступен. Настрой другого провайдера, чтобы продолжить."
 		},
 		"rooHistoryImport": {
-			"success_one": "{{count}} история задач Roo Code импортирована в Zoo Code.",
-			"success_other": "{{count}} историй задач Roo Code импортировано в Zoo Code."
+			"success_one": "{{count}} история задач Roo Code импортирована в Kiwi Code.",
+			"success_other": "{{count}} историй задач Roo Code импортировано в Kiwi Code."
 		}
 	},
 	"answers": {
@@ -236,8 +236,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "Ваша организация требует аутентификации Zoo Code Cloud. Войдите в систему, чтобы продолжить.",
-			"organization_mismatch": "Вы должны быть аутентифицированы с учетной записью Zoo Code Cloud вашей организации.",
+			"cloud_auth_required": "Ваша организация требует аутентификации Kiwi Code Cloud. Войдите в систему, чтобы продолжить.",
+			"organization_mismatch": "Вы должны быть аутентифицированы с учетной записью Kiwi Code Cloud вашей организации.",
 			"manual_url_empty": "Введи действительный URL обратного вызова",
 			"manual_url_no_query": "Недействительный URL обратного вызова: отсутствуют параметры запроса",
 			"manual_url_missing_params": "Недействительный URL обратного вызова: отсутствуют обязательные параметры (code и state)",
@@ -264,22 +264,22 @@
 	},
 	"docsLink": {
 		"label": "Docs",
-		"url": "https://docs.zoocode.dev"
+		"url": "https://github.com/FishRaposo/kiwi-code"
 	},
 	"zooAuth": {
 		"errors": {
-			"invalid_token_received": "Zoo Code: Получен недействительный token аутентификации.",
-			"token_verification_failed": "Zoo Code: Не удалось проверить token.",
-			"invalid_token": "Zoo Code: Недействительный token.",
-			"could_not_verify_token": "Zoo Code: Не удалось проверить token.",
-			"session_expired": "Сессия Zoo Code истекла. Войдите снова, чтобы продолжить использовать Zoo Gateway.",
+			"invalid_token_received": "Kiwi Code: Получен недействительный token аутентификации.",
+			"token_verification_failed": "Kiwi Code: Не удалось проверить token.",
+			"invalid_token": "Kiwi Code: Недействительный token.",
+			"could_not_verify_token": "Kiwi Code: Не удалось проверить token.",
+			"session_expired": "Сессия Kiwi Code истекла. Войдите снова, чтобы продолжить использовать Zoo Gateway.",
 			"out_of_credits": "Zoo Gateway: недостаточно кредитов. Добавьте кредиты, чтобы продолжить.",
 			"account_unavailable": "Zoo Gateway: ваша учётная запись сейчас недоступна. Обратитесь в поддержку.",
 			"budget_exceeded": "Zoo Gateway: лимит использования достигнут. Дождитесь сброса или пополните счёт."
 		},
 		"info": {
-			"connected": "Zoo Code: Успешно подключено! Теперь ты можешь использовать Zoo Code в качестве AI-провайдера.",
-			"disconnected": "Zoo Code: Успешно отключено."
+			"connected": "Kiwi Code: Успешно подключено! Теперь ты можешь использовать Kiwi Code в качестве AI-провайдера.",
+			"disconnected": "Kiwi Code: Успешно отключено."
 		},
 		"buttons": {
 			"sign_in": "Войти",
@@ -288,9 +288,9 @@
 		}
 	},
 	"codeActions": {
-		"explain": "Объяснить с Zoo Code",
-		"fix": "Исправить с Zoo Code",
-		"improve": "Улучшить с Zoo Code",
-		"addToContext": "Добавить в Zoo Code"
+		"explain": "Объяснить с Kiwi Code",
+		"fix": "Исправить с Kiwi Code",
+		"improve": "Улучшить с Kiwi Code",
+		"addToContext": "Добавить в Kiwi Code"
 	}
 }

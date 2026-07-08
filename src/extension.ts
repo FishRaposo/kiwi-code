@@ -60,7 +60,7 @@ let outputChannel: vscode.OutputChannel
 let extensionContext: vscode.ExtensionContext
 
 /**
- * Check if we should auto-open the Zoo Code sidebar after switching to a worktree.
+ * Check if we should auto-open the Kiwi Code sidebar after switching to a worktree.
  * This is called during extension activation to handle the worktree auto-open flow.
  */
 async function checkWorktreeAutoOpen(
@@ -88,9 +88,9 @@ async function checkWorktreeAutoOpen(
 			// Clear the state first to prevent re-triggering
 			await context.globalState.update("worktreeAutoOpenPath", undefined)
 
-			outputChannel.appendLine(`[Worktree] Auto-opening Zoo Code sidebar for worktree: ${worktreeAutoOpenPath}`)
+			outputChannel.appendLine(`[Worktree] Auto-opening Kiwi Code sidebar for worktree: ${worktreeAutoOpenPath}`)
 
-			// Open the Zoo Code sidebar with a slight delay to ensure UI is ready
+			// Open the Kiwi Code sidebar with a slight delay to ensure UI is ready
 			setTimeout(async () => {
 				try {
 					await vscode.commands.executeCommand("kiwi-code.plusButtonClicked")
@@ -146,7 +146,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	// Initialize OpenAI Codex OAuth manager for ChatGPT subscription-based access.
 	openAiCodexOAuthManager.initialize(context, (message) => outputChannel.appendLine(message))
 
-	// Cloud/Account system removed - Zoo Code auth disabled
+	// Cloud/Account system removed - Kiwi Code auth disabled
 	// await initZooCodeAuth(context)
 
 	// Get default commands from configuration.

@@ -1802,7 +1802,7 @@ export class ClineProvider
 		await this.upsertProviderProfile(currentApiConfigName, newConfiguration)
 	}
 
-	// Zoo Code Auth
+	// Kiwi Code Auth
 
 	async handleZooCodeCallback(token: string) {
 		// Auth mutation (token storage, subscription check, success toast) was already
@@ -2374,7 +2374,7 @@ export class ClineProvider
 			zooCodeUserName: undefined,
 			zooCodeUserEmail: undefined,
 			zooCodeUserImage: undefined,
-			zooCodeBaseUrl: "https://www.zoocode.dev",
+			zooCodeBaseUrl: "https://github.com/FishRaposo/kiwi-code",
 			deviceName: os.hostname(),
 		}
 
@@ -2391,7 +2391,7 @@ export class ClineProvider
 				deviceName: os.hostname(),
 			}
 		} catch {
-			// Keep the default unauthenticated state if the optional Zoo Code auth service is unavailable.
+			// Keep the default unauthenticated state if the optional Kiwi Code auth service is unavailable.
 		}
 
 		return {
@@ -2978,12 +2978,12 @@ export class ClineProvider
 			return
 		}
 		this.log(
-			`[Zoo Code] Webview hidden during active task.\n` +
+			`[Kiwi Code] Webview hidden during active task.\n` +
 				`  taskId:       ${task.taskId}\n` +
 				`  messageCount: ${task.clineMessages.length}\n` +
 				`  stackDepth:   ${this.clineStack.length}\n` +
 				`  timestamp:    ${new Date().toISOString()}\n` +
-				`If the panel appears gray after this, share this log with support@zoocode.dev`,
+				`If the panel appears gray after this, share this log with github.com/FishRaposo/kiwi-code/issues`,
 		)
 	}
 

@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Zoo Code",
+		"name": "Kiwi Code",
 		"description": "エディター内のAIデベロッパーチーム全体。"
 	},
 	"number_format": {
@@ -150,8 +150,8 @@
 		"auto_import_failed": "ZooCode設定の自動インポートに失敗しました：{{error}}",
 		"rooHistoryImport": {
 			"nothingFound": "{{domain}}からインポートするRoo Codeのタスク履歴が見つかりませんでした。",
-			"alreadyImported_one": "{{count}}件のRoo Codeタスク履歴はすでにZoo Codeにインポート済みです。",
-			"alreadyImported_other": "{{count}}件のRoo Codeタスク履歴はすでにZoo Codeにインポート済みです。"
+			"alreadyImported_one": "{{count}}件のRoo Codeタスク履歴はすでにKiwi Codeにインポート済みです。",
+			"alreadyImported_other": "{{count}}件のRoo Codeタスク履歴はすでにKiwi Codeにインポート済みです。"
 		}
 	},
 	"info": {
@@ -173,8 +173,8 @@
 			"signInUnavailable": "Roo Code Cloud へのサインインは現在利用できません。続行するには別のプロバイダーを設定してください。"
 		},
 		"rooHistoryImport": {
-			"success_one": "{{count}}件のRoo CodeタスクをZoo Codeにインポートしました。",
-			"success_other": "{{count}}件のRoo CodeタスクをZoo Codeにインポートしました。"
+			"success_one": "{{count}}件のRoo CodeタスクをKiwi Codeにインポートしました。",
+			"success_other": "{{count}}件のRoo CodeタスクをKiwi Codeにインポートしました。"
 		}
 	},
 	"answers": {
@@ -236,8 +236,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "あなたの組織では Zoo Code Cloud 認証が必要です。続行するにはサインインしてください。",
-			"organization_mismatch": "組織の Zoo Code Cloud アカウントで認証する必要があります。",
+			"cloud_auth_required": "あなたの組織では Kiwi Code Cloud 認証が必要です。続行するにはサインインしてください。",
+			"organization_mismatch": "組織の Kiwi Code Cloud アカウントで認証する必要があります。",
 			"manual_url_empty": "有効なコールバック URL を入力してください",
 			"manual_url_no_query": "無効なコールバック URL：クエリパラメータがありません",
 			"manual_url_missing_params": "無効なコールバック URL：必要なパラメータ（code と state）がありません",
@@ -264,22 +264,22 @@
 	},
 	"docsLink": {
 		"label": "Docs",
-		"url": "https://docs.zoocode.dev"
+		"url": "https://github.com/FishRaposo/kiwi-code"
 	},
 	"zooAuth": {
 		"errors": {
-			"invalid_token_received": "Zoo Code: 無効な認証 token を受信しました。",
-			"token_verification_failed": "Zoo Code: Token の検証に失敗しました。",
-			"invalid_token": "Zoo Code: 無効な token です。",
-			"could_not_verify_token": "Zoo Code: Token を検証できませんでした。",
-			"session_expired": "Zoo Codeのセッションの有効期限が切れました。Zoo Gatewayを引き続き使用するには、再度サインインしてください。",
+			"invalid_token_received": "Kiwi Code: 無効な認証 token を受信しました。",
+			"token_verification_failed": "Kiwi Code: Token の検証に失敗しました。",
+			"invalid_token": "Kiwi Code: 無効な token です。",
+			"could_not_verify_token": "Kiwi Code: Token を検証できませんでした。",
+			"session_expired": "Kiwi Codeのセッションの有効期限が切れました。Zoo Gatewayを引き続き使用するには、再度サインインしてください。",
 			"out_of_credits": "Zoo Gateway: クレジットが不足しています。続行するにはクレジットを追加してください。",
 			"account_unavailable": "Zoo Gateway: 現在アカウントを利用できません。サポートまでお問い合わせください。",
 			"budget_exceeded": "Zoo Gateway: 利用予算に達しました。リセットを待つかチャージしてください。"
 		},
 		"info": {
-			"connected": "Zoo Code: 接続に成功しました！Zoo Code を AI プロバイダーとして使用できます。",
-			"disconnected": "Zoo Code: 正常に切断されました。"
+			"connected": "Kiwi Code: 接続に成功しました！Kiwi Code を AI プロバイダーとして使用できます。",
+			"disconnected": "Kiwi Code: 正常に切断されました。"
 		},
 		"buttons": {
 			"sign_in": "サインイン",
@@ -288,9 +288,9 @@
 		}
 	},
 	"codeActions": {
-		"explain": "Zoo Codeで説明",
-		"fix": "Zoo Codeで修正",
-		"improve": "Zoo Codeで改善",
-		"addToContext": "Zoo Codeに追加"
+		"explain": "Kiwi Codeで説明",
+		"fix": "Kiwi Codeで修正",
+		"improve": "Kiwi Codeで改善",
+		"addToContext": "Kiwi Codeに追加"
 	}
 }

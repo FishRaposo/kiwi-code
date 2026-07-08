@@ -1356,7 +1356,7 @@ describe("zooCodeSignOut", () => {
 		vi.clearAllMocks()
 	})
 
-	it("disconnects Zoo Code and clears tokens from all zoo-gateway profiles", async () => {
+	it("disconnects Kiwi Code and clears tokens from all zoo-gateway profiles", async () => {
 		const { disconnectZooCode } = await import("../../../services/kiwi-code-auth")
 		const upsertProviderProfile = vi.fn().mockResolvedValue(undefined)
 		const saveConfig = vi.fn().mockResolvedValue(undefined)

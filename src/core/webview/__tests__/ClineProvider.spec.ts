@@ -258,7 +258,7 @@ vi.mock("../../../api/providers/fetchers/modelCache", () => ({
 }))
 
 vi.mock("../../../services/kiwi-code-auth", () => ({
-	getZooCodeBaseUrl: vi.fn(() => "https://www.zoocode.dev"),
+	getZooCodeBaseUrl: vi.fn(() => "https://www.kiwicode.dev"),
 	getCachedZooCodeToken: vi.fn(),
 	handleAuthCallback: vi.fn(),
 	setZooCodeUserInfo: vi.fn(),
@@ -3898,7 +3898,7 @@ describe("ClineProvider - Comprehensive Edit/Delete Edge Cases", () => {
 		})
 	})
 
-	describe("Zoo Code auth profile sync", () => {
+	describe("Kiwi Code auth profile sync", () => {
 		beforeEach(async () => {
 			const { getCachedZooCodeToken } = await import("../../../services/kiwi-code-auth")
 			vi.mocked(getCachedZooCodeToken).mockReturnValue("")
@@ -3930,7 +3930,7 @@ describe("ClineProvider - Comprehensive Edit/Delete Edge Cases", () => {
 					expect.objectContaining({
 						apiProvider: "zoo-gateway",
 						zooSessionToken: "zoo_ext_token",
-						zooGatewayBaseUrl: "https://www.zoocode.dev/api/gateway/v1",
+						zooGatewayBaseUrl: "https://www.kiwicode.dev/api/gateway/v1",
 					}),
 					false,
 				)
@@ -3974,7 +3974,7 @@ describe("ClineProvider - Comprehensive Edit/Delete Edge Cases", () => {
 					"Zoo Gateway",
 					expect.objectContaining({
 						zooSessionToken: "new-token",
-						zooGatewayBaseUrl: "https://www.zoocode.dev/api/gateway/v1",
+						zooGatewayBaseUrl: "https://www.kiwicode.dev/api/gateway/v1",
 					}),
 					true,
 				)
@@ -3982,7 +3982,7 @@ describe("ClineProvider - Comprehensive Edit/Delete Edge Cases", () => {
 					"Backup Zoo",
 					expect.objectContaining({
 						zooSessionToken: "new-token",
-						zooGatewayBaseUrl: "https://www.zoocode.dev/api/gateway/v1",
+						zooGatewayBaseUrl: "https://www.kiwicode.dev/api/gateway/v1",
 					}),
 				)
 			})
@@ -4027,7 +4027,7 @@ describe("ClineProvider - Comprehensive Edit/Delete Edge Cases", () => {
 					listConfig: vi.fn().mockResolvedValue([{ name: "Zoo Gateway", apiProvider: "zoo-gateway" }]),
 					getProfile: vi.fn().mockResolvedValue({
 						zooSessionToken: "current-token",
-						zooGatewayBaseUrl: "https://www.zoocode.dev/api/gateway/v1",
+						zooGatewayBaseUrl: "https://www.kiwicode.dev/api/gateway/v1",
 					}),
 				}
 
@@ -4046,7 +4046,7 @@ describe("ClineProvider - Comprehensive Edit/Delete Edge Cases", () => {
 					listConfig: vi.fn().mockResolvedValue([{ name: "Zoo Gateway", apiProvider: "zoo-gateway" }]),
 					getProfile: vi.fn().mockResolvedValue({
 						zooSessionToken: "stale-token",
-						zooGatewayBaseUrl: "https://www.zoocode.dev/api/gateway/v1",
+						zooGatewayBaseUrl: "https://www.kiwicode.dev/api/gateway/v1",
 					}),
 				}
 
@@ -4064,7 +4064,7 @@ describe("ClineProvider - Comprehensive Edit/Delete Edge Cases", () => {
 					listConfig: vi.fn().mockResolvedValue([{ name: "Zoo Gateway", apiProvider: "zoo-gateway" }]),
 					getProfile: vi.fn().mockResolvedValue({
 						zooSessionToken: "current-token",
-						zooGatewayBaseUrl: "https://staging.zoocode.dev/api/gateway/v1",
+						zooGatewayBaseUrl: "https://staging.kiwicode.dev/api/gateway/v1",
 					}),
 				}
 

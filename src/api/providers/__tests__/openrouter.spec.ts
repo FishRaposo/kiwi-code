@@ -117,7 +117,7 @@ describe("OpenRouterHandler", () => {
 			apiKey: mockOptions.openRouterApiKey,
 			defaultHeaders: {
 				"HTTP-Referer": "https://github.com/Zoo-Code-Org/Zoo-Code",
-				"X-Title": "Zoo Code",
+				"X-Title": "Kiwi Code",
 				"User-Agent": `ZooCode/${Package.version}`,
 			},
 			timeout: MOCK_TIMEOUT_MS,

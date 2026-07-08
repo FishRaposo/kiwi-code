@@ -15,7 +15,7 @@ describe("DEFAULT_HEADERS", () => {
 	})
 
 	it("should have correct X-Title value", () => {
-		expect(DEFAULT_HEADERS["X-Title"]).toBe("Zoo Code")
+		expect(DEFAULT_HEADERS["X-Title"]).toBe("Kiwi Code")
 	})
 
 	it("should have correct User-Agent format", () => {
