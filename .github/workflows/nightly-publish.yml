@@ -31,7 +31,7 @@ jobs:
           package_name=$(node -p "require('./src/package.json').name")
           publisher=$(node -p "require('./src/package.json').publisher")
 
-          test "$package_name" = "zoo-code"
+          test "$package_name" = "kiwi-code"
           test "$publisher" = "ZooCodeOrganization"
 
       - name: Validate publish ref
@@ -79,23 +79,23 @@ jobs:
         env:
           VERSION_NUMBER: ${{ steps.version.outputs.number }}
         run: |
-          vsix_path="bin/zoo-code-${VERSION_NUMBER}.vsix"
-          unzip -l "$vsix_path" > /tmp/zoo-code-vsix-contents.txt
-          grep -q "extension/package.json" /tmp/zoo-code-vsix-contents.txt
-          grep -q "extension/dist/extension.js" /tmp/zoo-code-vsix-contents.txt
-          grep -q "extension/webview-ui/build/assets/index.js" /tmp/zoo-code-vsix-contents.txt
-          grep -q "extension/webview-ui/audio/celebration.wav" /tmp/zoo-code-vsix-contents.txt
+          vsix_path="bin/kiwi-code-${VERSION_NUMBER}.vsix"
+          unzip -l "$vsix_path" > /tmp/kiwi-code-vsix-contents.txt
+          grep -q "extension/package.json" /tmp/kiwi-code-vsix-contents.txt
+          grep -q "extension/dist/extension.js" /tmp/kiwi-code-vsix-contents.txt
+          grep -q "extension/webview-ui/build/assets/index.js" /tmp/kiwi-code-vsix-contents.txt
+          grep -q "extension/webview-ui/audio/celebration.wav" /tmp/kiwi-code-vsix-contents.txt
 
       - name: Validate packaged manifest identity
         env:
           VERSION_NUMBER: ${{ steps.version.outputs.number }}
         run: |
-          vsix_path="bin/zoo-code-${VERSION_NUMBER}.vsix"
+          vsix_path="bin/kiwi-code-${VERSION_NUMBER}.vsix"
 
           artifact_name=$(unzip -p "$vsix_path" extension/package.json | jq -r '.name')
           artifact_publisher=$(unzip -p "$vsix_path" extension/package.json | jq -r '.publisher')
 
-          test "$artifact_name" = "zoo-code"
+          test "$artifact_name" = "kiwi-code"
           test "$artifact_publisher" = "ZooCodeOrganization"
 
       # Open VSX is intentionally excluded: it has no pre-release channel concept,
@@ -105,5 +105,5 @@ jobs:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
           VERSION_NUMBER: ${{ steps.version.outputs.number }}
         run: |
-          npx @vscode/vsce publish --pre-release --packagePath "bin/zoo-code-${VERSION_NUMBER}.vsix"
-          echo "Published ZooCodeOrganization.zoo-code ${VERSION_NUMBER} as a VS Code Marketplace pre-release"
+          npx @vscode/vsce publish --pre-release --packagePath "bin/kiwi-code-${VERSION_NUMBER}.vsix"
+          echo "Published ZooCodeOrganization.kiwi-code ${VERSION_NUMBER} as a VS Code Marketplace pre-release"

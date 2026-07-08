@@ -1,5 +1,5 @@
 ---
-"zoo-code": patch
+"kiwi-code": patch
 ---
 
 Fix LiteLLM provider cache key collision, credential priority, and model-selection fallback to non-existent default.
