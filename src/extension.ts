@@ -93,7 +93,7 @@ async function checkWorktreeAutoOpen(
 			// Open the Zoo Code sidebar with a slight delay to ensure UI is ready
 			setTimeout(async () => {
 				try {
-					await vscode.commands.executeCommand("zoo-code.plusButtonClicked")
+					await vscode.commands.executeCommand("kiwi-code.plusButtonClicked")
 				} catch (error) {
 					outputChannel.appendLine(
 						`[Worktree] Error auto-opening sidebar: ${error instanceof Error ? error.message : String(error)}`,

@@ -1,4 +1,4 @@
-// Stub for zoo-code-auth service (Cloud/Account system removed)
+// Stub for kiwi-code-auth service (Cloud/Account system removed)
 export function initZooCodeAuth(..._args: any[]): any { return undefined }
 export function disconnectZooCode(..._args: any[]): any { return undefined }
 export function isZooCodeAuthenticated(..._args: any[]): boolean { return false }

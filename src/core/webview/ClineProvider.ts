@@ -957,7 +957,7 @@ export class ClineProvider
 	 * Called once per webview init; handleZooCodeCallback is idempotent so repeated calls are safe.
 	 */
 	private async ensureZooGatewayProfileSeeded(): Promise<void> {
-		const { getCachedZooCodeToken, getZooCodeBaseUrl } = await import("../../services/zoo-code-auth")
+		const { getCachedZooCodeToken, getZooCodeBaseUrl } = await import("../../services/kiwi-code-auth")
 		const token = getCachedZooCodeToken()
 		if (!token) return
 		const expectedGatewayBaseUrl = `${getZooCodeBaseUrl()}/api/gateway/v1`
@@ -992,7 +992,7 @@ export class ClineProvider
 			}
 
 			if (allUpToDate) {
-				const { postZooGatewayCredentialsReady } = await import("../../services/zoo-gateway-credentials-sync")
+				const { postZooGatewayCredentialsReady } = await import("../../services/kiwi-gateway-credentials-sync")
 				postZooGatewayCredentialsReady((_message: any) => this.postMessageToWebview(_message))
 				return
 			}
@@ -1823,7 +1823,7 @@ export class ClineProvider
 			// (staging, local dev) route completions to the correct backend instead of always
 			// hard-coding production. An already-set value in the profile is NOT preserved here —
 			// it must always align with the auth server the user just authenticated against.
-			const { getZooCodeBaseUrl } = await import("../../services/zoo-code-auth")
+			const { getZooCodeBaseUrl } = await import("../../services/kiwi-code-auth")
 			const derivedGatewayBaseUrl = `${getZooCodeBaseUrl()}/api/gateway/v1`
 
 			// Check if Zoo Gateway is the currently active profile by apiProvider identity,
@@ -1877,7 +1877,7 @@ export class ClineProvider
 			)
 		}
 		await this.postStateToWebview()
-		const { postZooGatewayCredentialsReady } = await import("../../services/zoo-gateway-credentials-sync")
+		const { postZooGatewayCredentialsReady } = await import("../../services/kiwi-gateway-credentials-sync")
 		postZooGatewayCredentialsReady((_message: any) => this.postMessageToWebview(_message))
 	}
 
@@ -2380,7 +2380,7 @@ export class ClineProvider
 
 		try {
 			const { isZooCodeAuthenticated, getCachedZooCodeUserInfo, getZooCodeBaseUrl } =
-				await import("../../services/zoo-code-auth")
+				await import("../../services/kiwi-code-auth")
 			const userInfo = getCachedZooCodeUserInfo()
 			zooCodeState = {
 				zooCodeIsAuthenticated: await isZooCodeAuthenticated(),
