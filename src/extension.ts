@@ -17,9 +17,7 @@ if (fs.existsSync(envPath)) {
 	}
 }
 
-import type { CloudUserInfo, AuthState } from "@roo-code/types"
-import { CloudService } from "@roo-code/cloud"
-import { TelemetryService, PostHogTelemetryClient } from "@roo-code/telemetry"
+import { TelemetryService } from "@roo-code/telemetry"
 import { customToolRegistry } from "@roo-code/core"
 
 import "./utils/path" // Necessary to have access to String.prototype.toPosix.
@@ -36,7 +34,6 @@ import { TerminalRegistry } from "./integrations/terminal/TerminalRegistry"
 import { openAiCodexOAuthManager } from "./integrations/openai-codex/oauth"
 import { McpServerManager } from "./services/mcp/McpServerManager"
 import { CodeIndexManager } from "./services/code-index/manager"
-import { MdmService } from "./services/mdm/MdmService"
 import { migrateSettings } from "./utils/migrateSettings"
 import { autoImportSettings } from "./utils/autoImportSettings"
 import { API } from "./extension/api"
@@ -50,7 +47,6 @@ import {
 } from "./activate"
 import { initializeI18n } from "./i18n"
 import { initializeModelCacheRefresh } from "./api/providers/fetchers/modelCache"
-import { initZooCodeAuth } from "./services/zoo-code-auth"
 
 /**
  * Built using https://github.com/microsoft/vscode-webview-ui-toolkit
@@ -62,11 +58,6 @@ import { initZooCodeAuth } from "./services/zoo-code-auth"
 
 let outputChannel: vscode.OutputChannel
 let extensionContext: vscode.ExtensionContext
-let cloudService: CloudService | undefined
-
-let authStateChangedHandler: ((data: { state: AuthState; previousState: AuthState }) => Promise<void>) | undefined
-let settingsUpdatedHandler: (() => void) | undefined
-let userInfoHandler: ((data: { userInfo: CloudUserInfo }) => Promise<void>) | undefined
 
 /**
  * Check if we should auto-open the Zoo Code sidebar after switching to a worktree.
@@ -139,17 +130,12 @@ export async function activate(context: vscode.ExtensionContext) {
 	// Initialize telemetry service.
 	const telemetryService = TelemetryService.createInstance()
 
-	try {
-		telemetryService.register(new PostHogTelemetryClient())
-	} catch (error) {
-		console.warn("Failed to register PostHogTelemetryClient:", error)
-	}
-
-	// Create logger for cloud services.
-	const cloudLogger = createDualLogger(createOutputChannelLogger(outputChannel))
-
-	// Initialize MDM service
-	const mdmService = await MdmService.createInstance(cloudLogger)
+	// Cloud/Account system removed - telemetry disabled
+	// try {
+	// 	telemetryService.register(new PostHogTelemetryClient())
+	// } catch (error) {
+	// 	console.warn("Failed to register PostHogTelemetryClient:", error)
+	// }
 
 	// Initialize i18n for internationalization support.
 	initializeI18n(context.globalState.get("language") ?? formatLanguage(vscode.env.language))
@@ -160,8 +146,8 @@ export async function activate(context: vscode.ExtensionContext) {
 	// Initialize OpenAI Codex OAuth manager for ChatGPT subscription-based access.
 	openAiCodexOAuthManager.initialize(context, (message) => outputChannel.appendLine(message))
 
-	// Initialize Zoo Code auth service for extension session token management.
-	await initZooCodeAuth(context)
+	// Cloud/Account system removed - Zoo Code auth disabled
+	// await initZooCodeAuth(context)
 
 	// Get default commands from configuration.
 	const defaultCommands = vscode.workspace.getConfiguration(Package.name).get<string[]>("allowedCommands") || []
@@ -196,42 +182,11 @@ export async function activate(context: vscode.ExtensionContext) {
 		}
 	}
 
-	// Initialize the provider *before* the Roo Code Cloud service.
-	const provider = new ClineProvider(context, outputChannel, "sidebar", contextProxy, mdmService)
-
-	// Initialize Roo Code Cloud service.
-	const postStateListener = () => ClineProvider.getVisibleInstance()?.postStateToWebviewWithoutClineMessages()
-
-	authStateChangedHandler = async (_data: { state: AuthState; previousState: AuthState }) => {
-		postStateListener()
-	}
-
-	settingsUpdatedHandler = async () => {
-		postStateListener()
-	}
-
-	userInfoHandler = async ({ userInfo }: { userInfo: CloudUserInfo }) => {
-		postStateListener()
-	}
-
-	try {
-		cloudService = await CloudService.createInstance(context, cloudLogger, {
-			"auth-state-changed": authStateChangedHandler,
-			"settings-updated": settingsUpdatedHandler,
-			"user-info": userInfoHandler,
-		})
-
-		// Add to subscriptions for proper cleanup on deactivate.
-		context.subscriptions.push(cloudService)
-	} catch (error) {
-		cloudService = undefined
-		outputChannel.appendLine(
-			`[CloudService] Initialization failed; continuing without cloud startup dependencies: ${error instanceof Error ? error.message : String(error)}`,
-		)
-	}
+	// Initialize the provider.
+	const provider = new ClineProvider(context, outputChannel, "sidebar", contextProxy)
 
 	// Finish initializing the provider.
-	TelemetryService.instance.setProvider(provider)
+	TelemetryService.instance.setProvider()
 
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(ClineProvider.sideBarId, provider, {
@@ -308,7 +263,6 @@ export async function activate(context: vscode.ExtensionContext) {
 			{ path: context.extensionPath, pattern: "**/*.ts" },
 			{ path: path.join(context.extensionPath, "../packages/types"), pattern: "**/*.ts" },
 			{ path: path.join(context.extensionPath, "../packages/telemetry"), pattern: "**/*.ts" },
-			{ path: path.join(context.extensionPath, "node_modules/@roo-code/cloud"), pattern: "**/*" },
 		]
 
 		console.log(
@@ -363,28 +317,6 @@ export async function activate(context: vscode.ExtensionContext) {
 // This method is called when your extension is deactivated.
 export async function deactivate() {
 	outputChannel.appendLine(`${Package.name} extension deactivated`)
-
-	if (cloudService && CloudService.hasInstance()) {
-		try {
-			if (authStateChangedHandler) {
-				CloudService.instance.off("auth-state-changed", authStateChangedHandler)
-			}
-
-			if (settingsUpdatedHandler) {
-				CloudService.instance.off("settings-updated", settingsUpdatedHandler)
-			}
-
-			if (userInfoHandler) {
-				CloudService.instance.off("user-info", userInfoHandler as any)
-			}
-
-			outputChannel.appendLine("CloudService event handlers cleaned up")
-		} catch (error) {
-			outputChannel.appendLine(
-				`Failed to clean up CloudService event handlers: ${error instanceof Error ? error.message : String(error)}`,
-			)
-		}
-	}
 
 	await McpServerManager.cleanup(extensionContext)
 	TelemetryService.instance.shutdown()

@@ -34,7 +34,6 @@ import {
 	FriendliHandler,
 	VercelAiGatewayHandler,
 	OpencodeGoHandler,
-	ZooGatewayHandler,
 	MiniMaxHandler,
 	MimoHandler,
 	BasetenHandler,
@@ -196,8 +195,6 @@ export function buildApiHandler(configuration: ProviderSettings): ApiHandler {
 			return new VercelAiGatewayHandler(options)
 		case "opencode-go":
 			return new OpencodeGoHandler(options)
-		case "zoo-gateway":
-			return new ZooGatewayHandler(options)
 		case "minimax":
 			return new MiniMaxHandler(options)
 		case "baseten":

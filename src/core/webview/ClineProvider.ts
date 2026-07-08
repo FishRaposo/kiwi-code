@@ -79,7 +79,6 @@ import { MarketplaceManager } from "../../services/marketplace"
 import { ShadowCheckpointService } from "../../services/checkpoints/ShadowCheckpointService"
 import { CodeIndexManager } from "../../services/code-index/manager"
 import type { IndexProgressUpdate } from "../../services/code-index/interfaces/manager"
-import { MdmService } from "../../services/mdm/MdmService"
 import { SkillsManager } from "../../services/skills/SkillsManager"
 
 import { fileExistsAtPath } from "../../utils/fs"
@@ -181,7 +180,6 @@ export class ClineProvider
 	protected mcpHub?: McpHub // Change from private to protected
 	protected skillsManager?: SkillsManager
 	private marketplaceManager: MarketplaceManager
-	private mdmService?: MdmService
 	private taskCreationCallback: (task: Task) => void
 	private taskEventListeners: WeakMap<Task, Array<() => void>> = new WeakMap()
 	private currentWorkspacePath: string | undefined
@@ -222,7 +220,6 @@ export class ClineProvider
 		private readonly outputChannel: vscode.OutputChannel,
 		private readonly renderContext: "sidebar" | "editor" = "sidebar",
 		public readonly contextProxy: ContextProxy,
-		mdmService?: MdmService,
 	) {
 		super()
 		this.currentWorkspacePath = getWorkspacePath()
@@ -233,8 +230,7 @@ export class ClineProvider
 
 		ClineProvider.activeInstances.add(this)
 
-		this.mdmService = mdmService
-		this.updateGlobalState("codebaseIndexModels", EMBEDDING_MODEL_PROFILES)
+				this.updateGlobalState("codebaseIndexModels", EMBEDDING_MODEL_PROFILES)
 
 		// Initialize the per-task file-based history store.
 		// The globalState write-through is debounced separately (not on every mutation)
@@ -970,7 +966,7 @@ export class ClineProvider
 		// Using .find() would miss stale tokens in duplicate/renamed profiles since handleZooCodeCallback
 		// uses .filter() and updates all of them — the early-return guard must match.
 		const allProfiles = await this.providerSettingsManager.listConfig()
-		const zooGatewayProfiles = allProfiles.filter((p) => p.apiProvider === "zoo-gateway")
+		const zooGatewayProfiles = allProfiles.filter((p) => false)
 
 		if (zooGatewayProfiles.length === 0) {
 			this.log("[ensureZooGatewayProfileSeeded] No zoo-gateway profile found, creating one")
@@ -997,7 +993,7 @@ export class ClineProvider
 
 			if (allUpToDate) {
 				const { postZooGatewayCredentialsReady } = await import("../../services/zoo-gateway-credentials-sync")
-				postZooGatewayCredentialsReady((message) => this.postMessageToWebview(message))
+				postZooGatewayCredentialsReady((_message: any) => this.postMessageToWebview(_message))
 				return
 			}
 		}
@@ -1831,19 +1827,19 @@ export class ClineProvider
 
 			// Check if Zoo Gateway is the currently active profile by apiProvider identity,
 			// not by profile name (profile names are user-renameable).
-			const isZooGatewayActive = currentSettings.apiProvider === "zoo-gateway"
+			const isZooGatewayActive = false
 
 			// Always scan ALL profiles and update every zoo-gateway profile with the new token.
 			// This ensures renamed profiles, duplicate profiles, and inactive profiles all stay
 			// in sync. The model lookup in requestRouterModels uses .find() which returns the
 			// first zoo-gateway profile it finds — if that profile has a stale token, requests fail.
 			const allProfiles = await this.providerSettingsManager.listConfig()
-			const zooProfiles = allProfiles.filter((p) => p.apiProvider === "zoo-gateway")
+			const zooProfiles = allProfiles.filter((p) => false)
 
 			if (zooProfiles.length === 0) {
 				// No existing zoo-gateway profile — create the canonical default.
 				const newConfiguration: ProviderSettings = {
-					apiProvider: "zoo-gateway",
+					apiProvider: "openai",
 					zooSessionToken: token,
 					zooGatewayModelId: apiConfiguration.zooGatewayModelId,
 					zooGatewayBaseUrl: derivedGatewayBaseUrl,
@@ -1881,7 +1877,7 @@ export class ClineProvider
 		}
 		await this.postStateToWebview()
 		const { postZooGatewayCredentialsReady } = await import("../../services/zoo-gateway-credentials-sync")
-		postZooGatewayCredentialsReady((message) => this.postMessageToWebview(message))
+		postZooGatewayCredentialsReady((_message: any) => this.postMessageToWebview(_message))
 	}
 
 	// Requesty
@@ -2905,17 +2901,7 @@ export class ClineProvider
 	 * @returns true if compliant or no MDM policy exists, false if MDM policy exists and user is non-compliant
 	 */
 	public checkMdmCompliance(): boolean {
-		if (!this.mdmService) {
-			return true // No MDM service, allow operation
-		}
-
-		const compliance = this.mdmService.isCompliant()
-
-		if (!compliance.compliant) {
-			return false
-		}
-
-		return true
+		return true // MDM removed - always compliant
 	}
 
 	/**

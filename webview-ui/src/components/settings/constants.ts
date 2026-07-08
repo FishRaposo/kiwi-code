@@ -67,7 +67,6 @@ export const PROVIDERS = [
 	{ value: "friendli", label: "Friendli", proxy: false },
 	{ value: "vercel-ai-gateway", label: "Vercel AI Gateway", proxy: false },
 	{ value: "opencode-go", label: "Opencode Go", proxy: false },
-	{ value: "zoo-gateway", label: "Zoo Gateway", proxy: false },
 	{ value: "minimax", label: "MiniMax", proxy: false },
 	{ value: "mimo", label: "Xiaomi MiMo", proxy: false },
 	{ value: "baseten", label: "Baseten", proxy: false },

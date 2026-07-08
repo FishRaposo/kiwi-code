@@ -28,7 +28,7 @@ import { getOllamaModels } from "./ollama"
 import { getLMStudioModels } from "./lmstudio"
 import { getPoeModels } from "./poe"
 import { getDeepSeekModels } from "./deepseek"
-import { getZooGatewayModels } from "./zoo-gateway"
+// import { getZooGatewayModels } from "./zoo-gateway"
 
 const memoryCache = new NodeCache({ stdTTL: 5 * 60, checkperiod: 5 * 60 })
 
@@ -44,7 +44,6 @@ const inFlightRefresh = new Map<string, Promise<ModelRecord>>()
 // allowlists or org policies). For these we MUST NOT cache results on disk or
 // in memory: a sign-in/out cycle could otherwise serve a previous user's model
 // list to the next user, and stale data could mask backend allowlist updates.
-const AUTH_SCOPED_PROVIDERS: ReadonlySet<RouterName> = new Set(["zoo-gateway"])
 
 // Providers whose model list is determined by the server URL, not just by the provider name.
 // Each unique baseUrl must be cached independently so that switching endpoints never serves
@@ -68,7 +67,7 @@ const KEY_SCOPED_PROVIDERS: ReadonlySet<RouterName> = new Set([
 ])
 
 function isAuthScopedProvider(provider: RouterName): boolean {
-	return AUTH_SCOPED_PROVIDERS.has(provider)
+	return URL_SCOPED_PROVIDERS.has(provider)
 }
 
 // Memoize derived digests so the deliberately-structureless KDF runs at most once per
@@ -217,9 +216,7 @@ async function fetchModelsFromProvider(options: GetModelsOptions): Promise<Model
 		case "deepseek":
 			models = await getDeepSeekModels(options.baseUrl, options.apiKey)
 			break
-		case "zoo-gateway":
-			models = await getZooGatewayModels({ zooSessionToken: options.apiKey, zooGatewayBaseUrl: options.baseUrl })
-			break
+		/* zoo-gateway removed */
 		default: {
 			// Ensures router is exhaustively checked if RouterName is a strict union.
 			const exhaustiveCheck: never = provider

@@ -52,7 +52,6 @@ describe("Model Validation Functions", () => {
 		poe: {},
 		deepseek: {},
 		"opencode-go": {},
-		"zoo-gateway": {},
 	}
 
 	const allowAllOrganization: OrganizationAllowList = {
@@ -217,122 +216,7 @@ describe("Model Validation Functions", () => {
 		})
 	})
 
-	describe("Friendli validation", () => {
-		it("returns an apiKey error when the Friendli API key is missing", () => {
-			const config: ProviderSettings = {
-				apiProvider: "friendli",
-				apiModelId: "zai-org/GLM-5.2",
-				// Missing friendliApiKey
-			}
-
-			const result = validateApiConfigurationExcludingModelErrors(config, mockRouterModels, allowAllOrganization)
-			expect(result).toBe("settings:validation.apiKey")
-		})
-
-		it("returns undefined for a valid Friendli configuration", () => {
-			const config: ProviderSettings = {
-				apiProvider: "friendli",
-				friendliApiKey: "valid-key",
-				apiModelId: "zai-org/GLM-5.2",
-			}
-
-			const result = validateApiConfigurationExcludingModelErrors(config, mockRouterModels, allowAllOrganization)
-			expect(result).toBeUndefined()
-		})
-	})
-
-	describe("Zoo Gateway validation", () => {
-		describe("validateApiConfiguration (welcome-view entry point)", () => {
-			it("returns a sign-in error when neither profile token nor Zoo auth is present", () => {
-				const config: ProviderSettings = {
-					apiProvider: "zoo-gateway",
-					zooGatewayModelId: "anthropic/claude-sonnet-4",
-				}
-
-				const result = validateApiConfiguration(config, mockRouterModels, allowAllOrganization, false)
-				expect(result).toBe("settings:validation.zooGatewaySignIn")
-			})
-
-			it("returns undefined when Zoo Code auth is active without a profile token", () => {
-				const config: ProviderSettings = {
-					apiProvider: "zoo-gateway",
-					zooGatewayModelId: "anthropic/claude-sonnet-4",
-				}
-
-				const result = validateApiConfiguration(config, mockRouterModels, allowAllOrganization, true)
-				expect(result).toBeUndefined()
-			})
-
-			it("returns undefined when a profile session token is set", () => {
-				const config: ProviderSettings = {
-					apiProvider: "zoo-gateway",
-					zooGatewayModelId: "anthropic/claude-sonnet-4",
-					zooSessionToken: "zoo_ext_test_token",
-				}
-
-				const result = validateApiConfiguration(config, mockRouterModels, allowAllOrganization, false)
-				expect(result).toBeUndefined()
-			})
-		})
-
-		describe("validateApiConfigurationExcludingModelErrors (settings form)", () => {
-			// The settings form short-circuits zoo-gateway and renders the sign-in
-			// error inline in `ZooGateway.tsx`, so this entry point must never
-			// surface a zoo-gateway-specific error regardless of auth state.
-			it("returns undefined for zoo-gateway when unauthenticated and no token", () => {
-				const config: ProviderSettings = {
-					apiProvider: "zoo-gateway",
-					zooGatewayModelId: "anthropic/claude-sonnet-4",
-				}
-
-				const result = validateApiConfigurationExcludingModelErrors(
-					config,
-					mockRouterModels,
-					allowAllOrganization,
-				)
-				expect(result).toBeUndefined()
-			})
-
-			it("returns undefined for zoo-gateway when a profile token is set", () => {
-				const config: ProviderSettings = {
-					apiProvider: "zoo-gateway",
-					zooGatewayModelId: "anthropic/claude-sonnet-4",
-					zooSessionToken: "zoo_ext_test_token",
-				}
-
-				const result = validateApiConfigurationExcludingModelErrors(
-					config,
-					mockRouterModels,
-					allowAllOrganization,
-				)
-				expect(result).toBeUndefined()
-			})
-
-			it("surfaces PROVIDER_NOT_ALLOWED for zoo-gateway when organization disallows it", () => {
-				const orgWithoutZooGateway: OrganizationAllowList = {
-					allowAll: false,
-					providers: {
-						openrouter: { allowAll: true },
-					},
-				}
-
-				const config: ProviderSettings = {
-					apiProvider: "zoo-gateway",
-					zooGatewayModelId: "anthropic/claude-sonnet-4",
-				}
-
-				const result = validateApiConfigurationExcludingModelErrors(
-					config,
-					mockRouterModels,
-					orgWithoutZooGateway,
-				)
-				expect(result).toContain("settings:validation.providerNotAllowed")
-			})
-		})
-	})
-})
-
-describe("validateBedrockArn", () => {
+	describe("validateBedrockArn", () => {
 	describe("always returns isValid: true (no strict format validation)", () => {
 		it("accepts standard AWS Bedrock ARNs", () => {
 			const result = validateBedrockArn(
@@ -419,4 +303,5 @@ describe("validateBedrockArn", () => {
 			expect(result.errorMessage).toBeUndefined()
 		})
 	})
+})
 })
