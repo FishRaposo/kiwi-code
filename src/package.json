@@ -1,8 +1,8 @@
 {
-	"name": "zoo-code",
+	"name": "kiwi-code",
 	"displayName": "%extension.displayName%",
 	"description": "%extension.description%",
-	"publisher": "ZooCodeOrganization",
+	"publisher": "FishRaposo",
 	"version": "3.66.0",
 	"icon": "assets/icons/icon.png",
 	"galleryBanner": {
@@ -14,13 +14,13 @@
 		"node": "20.20.2"
 	},
 	"author": {
-		"name": "Zoo Code"
+		"name": "Kiwi Code"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Zoo-Code-Org/Zoo-Code"
+		"url": "https://github.com/FishRaposo/kiwi-code"
 	},
-	"homepage": "https://zoocode.dev",
+	"homepage": "https://github.com/FishRaposo/kiwi-code",
 	"categories": [
 		"AI",
 		"Chat",
@@ -42,8 +42,8 @@
 		"sonnet",
 		"ai",
 		"llama",
-		"zoo code",
-		"zoocode"
+		"kiwi code",
+		"kiwicode"
 	],
 	"activationEvents": [
 		"onLanguage",

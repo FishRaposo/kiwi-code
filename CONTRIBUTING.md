@@ -11,9 +11,9 @@
 </sub>
 </div>
 
-# Contributing to Zoo Code
+# Contributing to Kiwi Code
 
-Zoo Code is a community-driven project, and we deeply value every contribution. To streamline collaboration, we operate on an [Issue-First](#issue-first-approach) basis, meaning all [Pull Requests (PRs)](#submitting-a-pull-request) must first be linked to a GitHub Issue. Please review this guide carefully.
+Kiwi Code is a community-driven project, and we deeply value every contribution. To streamline collaboration, we operate on an [Issue-First](#issue-first-approach) basis, meaning all [Pull Requests (PRs)](#submitting-a-pull-request) must first be linked to a GitHub Issue. Please review this guide carefully.
 
 ## Table of Contents
 
@@ -54,10 +54,9 @@ Our roadmap guides the project's direction. Align your contributions with these 
 
 Mention alignment with these areas in your PRs.
 
-### 3. Join the Zoo Code Community
+### 3. Join the Kiwi Code Community
 
-- **Discord:** Join our [Discord](https://discord.gg/VxfP4Vx3gX).
-- **Reddit:** Join our [Reddit](https://www.reddit.com/r/ZooCode/).
+- **GitHub Discussions:** Join our [Discussions](https://github.com/FishRaposo/kiwi-code/discussions).
 
 ## Finding & Planning Your Contribution
 
@@ -71,26 +70,25 @@ Mention alignment with these areas in your PRs.
 
 All contributions start with a GitHub Issue using our skinny templates.
 
-- **Check existing issues**: Search [GitHub Issues](https://github.com/Zoo-Code-Org/Zoo-Code/issues).
+- **Check existing issues**: Search [GitHub Issues](https://github.com/FishRaposo/kiwi-code/issues).
 - **Create an issue** using:
     - **Enhancements:** "Enhancement Request" template (plain language focused on user benefit).
     - **Bugs:** "Bug Report" template (minimal repro + expected vs actual + version).
-- **Want to work on it?** Comment "Claiming" on the issue and reach out to the core team on [Discord](https://discord.gg/VxfP4Vx3gX) to get assigned. Assignment will be confirmed in the thread.
+- **Want to work on it?** Comment "Claiming" on the issue and reach out to the core team on [GitHub Discussions](https://github.com/FishRaposo/kiwi-code/discussions) to get assigned.
 - **PRs must link to the issue.** Unlinked PRs may be closed.
 
 ### Deciding What to Work On
 
-- Check the [GitHub Issues page](https://github.com/Zoo-Code-Org/Zoo-Code/issues) for issues.
-- For docs, visit [Zoo Code Docs](https://github.com/Zoo-Code-Org/Zoo-Code-Docs).
+- Check the [GitHub Issues page](https://github.com/FishRaposo/kiwi-code/issues) for issues.
 
 ### Reporting Bugs
 
 - Check for existing reports first.
-- Create a new bug using the ["Bug Report" template](https://github.com/Zoo-Code-Org/Zoo-Code/issues/new/choose) with:
+- Create a new bug using the ["Bug Report" template](https://github.com/FishRaposo/kiwi-code/issues/new/choose) with:
     - Clear, numbered reproduction steps
     - Expected vs actual result
-    - Zoo Code version (required); API provider/model if relevant
-- **Security issues**: Report privately via [security advisories](https://github.com/Zoo-Code-Org/Zoo-Code/security/advisories/new).
+    - Kiwi Code version (required); API provider/model if relevant
+- **Security issues**: Report privately via [security advisories](https://github.com/FishRaposo/kiwi-code/security/advisories/new).
 
 ## Development & Submission Process
 
@@ -99,7 +97,7 @@ All contributions start with a GitHub Issue using our skinny templates.
 1. **Fork & Clone:**
 
 ```
-git clone https://github.com/YOUR_USERNAME/Zoo-Code.git
+git clone https://github.com/FishRaposo/kiwi-code.git
 ```
 
 2. **Install Dependencies:**
@@ -128,7 +126,7 @@ pnpm install
 
 ### Pull Request Policy
 
-- Must reference an assigned GitHub Issue. To get assigned: comment "Claiming" on the issue and reach out to the core team on [Discord](https://discord.gg/VxfP4Vx3gX). Assignment will be confirmed in the thread.
+- Must reference an assigned GitHub Issue. To get assigned: comment "Claiming" on the issue and reach out on [GitHub Discussions](https://github.com/FishRaposo/kiwi-code/discussions). Assignment will be confirmed in the thread.
 - Unlinked PRs may be closed.
 - PRs should pass CI tests, align with the roadmap, and have clear documentation.
 
@@ -173,4 +171,4 @@ Please do not submit AI-generated changes that you do not understand or cannot m
 
 ## Legal
 
-By contributing, you agree your contributions will be licensed under the Apache 2.0 License, consistent with Zoo Code's licensing.
+By contributing, you agree your contributions will be licensed under the Apache 2.0 License, consistent with Kiwi Code's licensing.

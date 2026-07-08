@@ -1,74 +1,50 @@
-# Zoo Code Privacy Policy
+# Kiwi Code Privacy Policy
 
-**Last Updated: May 13th, 2026**
+**Last Updated: July 8, 2026**
 
-Zoo Code respects your privacy and is committed to transparency about how we
-handle your data. Below is a simple breakdown of where key pieces of data
-go—and, importantly, where they don't.
+Kiwi Code is a fully self-hosted, open-source VS Code extension forked from Roo
+Code. We respect your privacy and have designed Kiwi Code with privacy as a
+core principle.
 
-## **Where Your Data Goes (And Where It Doesn’t)**
+## What Data Does Kiwi Code Collect?
 
-- **Code & Files**: Zoo Code accesses files on your local machine when needed
-  for AI-assisted features. When you send commands to Zoo Code, relevant files
-  may be transmitted to your chosen AI model provider (e.g., OpenAI, Anthropic,
-  OpenRouter) to generate responses. If you select Zoo Code Cloud as the model
-  provider (proxy mode), your code may transit Zoo Code servers only to forward
-  it to the upstream provider. We do not store your code; it is deleted
-  immediately after forwarding. Otherwise, your code is sent directly to the
-  provider. AI providers may store data per their privacy policies.
-- **Commands**: Any commands executed through Zoo Code happen on your local
-  environment. However, when you use AI-powered features, the relevant code and
-  context from your commands may be transmitted to your chosen AI model provider
-  (e.g., OpenAI, Anthropic, OpenRouter) to generate responses. We do not have
-  access to or store this data, but AI providers may process it per their
-  privacy policies.
-- **Prompts & AI Requests**: When you use AI-powered features, your prompts and
-  relevant project context are sent to your chosen AI model provider (e.g.,
-  OpenAI, Anthropic, OpenRouter) to generate responses. We do not store or
-  process this data. These AI providers have their own privacy policies and may
-  store data per their terms of service. If you choose Zoo Code Cloud as the
-  provider (proxy mode), prompts may transit Zoo Code servers only to forward
-  them to the upstream model and are not stored.
-- **API Keys & Credentials**: If you enter an API key (e.g., to connect an AI
-  model), it is stored locally on your device and never sent to us or any third
-  party, except the provider you have chosen.
-- **Telemetry (Usage Data)**: We collect feature usage and error data to help
-  us improve Zoo Code. This telemetry is powered by PostHog and includes your
-  VS Code machine ID, feature usage patterns, and exception reports. The VS Code
-  machine ID is a persistent identifier and may be considered personal data in
-  some jurisdictions; we use it only for product analytics and error grouping.
-  We retain telemetry only as long as needed for product analytics and debugging.
-  Telemetry does **not** collect your code or AI prompts, and you can opt out at
-  any time through the settings.
-- **Marketplace Requests**: When you browse or search the Marketplace for Model
-  Configuration Profiles (MCPs) or Custom Modes, Zoo Code makes a secure API
-  call to Zoo Code's backend servers to retrieve listing information. These
-  requests send only the query parameters (e.g., extension version, search term)
-  necessary to fulfill the request and do not include your code, prompts, or
-  personally identifiable information.
+**None.** Kiwi Code does not collect any telemetry, usage data, or analytics.
 
-## **How We Use Your Data (If Collected)**
+- **No Telemetry:** We do not track feature usage, errors, or any other metrics.
+- **No Cloud Services:** Kiwi Code does not connect to any backend servers,
+  cloud providers, or proprietary services.
+- **No Account Required:** There is no login, no account system, and no user
+  tracking.
 
-- We use telemetry to understand feature usage and improve Zoo Code.
-- We do **not** sell or share your data.
-- We do **not** train any models on your data.
+## Where Your Data Goes
 
-## **Your Choices & Control**
+- **Code & Files:** Accessed entirely on your local machine. When you use
+  AI-powered features, your code and prompts are sent only to the AI providers
+  you configure (e.g., OpenAI, Anthropic, local Ollama). Kiwi Code does not
+  intercept, store, or forward this data anywhere.
+- **Commands:** Executed entirely in your local environment.
+- **Prompts & AI Requests:** Sent directly to the AI model providers you choose.
+  Kiwi Code has no access to this data.
+- **API Keys & Credentials:** Stored locally on your device in VS Code's secure
+  storage. Never sent to any third party except the provider you configured.
 
-- You can run models locally to prevent data being sent to third-parties.
-- Telemetry collection is enabled by default to help us improve Zoo Code, but
-  you can opt out at any time through the settings.
-- You can delete Zoo Code to stop all data collection.
+## AI Provider Privacy
 
-## **Security & Updates**
+Please note that while Kiwi Code itself collects no data, the AI providers you
+use (OpenAI, Anthropic, Google, etc.) have their own privacy policies. We
+recommend reviewing their policies if you have privacy concerns. For maximum
+privacy, you can run models locally using Ollama or LM Studio.
 
-We take reasonable measures to secure your data, but no system is 100% secure.
-If our privacy policy changes, we will notify you within the extension.
+## Security
 
-## **Contact Us**
+We take reasonable measures to secure the code, but no system is 100% secure.
+If you discover a security vulnerability, please report it via
+[GitHub Security Advisories](https://github.com/FishRaposo/kiwi-code/security/advisories/new).
 
-For any privacy-related questions, reach out to us at support@zoocode.dev.
+## Contact
+
+For questions, open an issue on [GitHub](https://github.com/FishRaposo/kiwi-code/issues).
 
 ---
 
-By using Zoo Code, you agree to this Privacy Policy.
+By using Kiwi Code, you agree to this Privacy Policy.
