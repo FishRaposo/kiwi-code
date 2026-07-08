@@ -108,19 +108,19 @@ describe("generatePackageJson", () => {
 				},
 			},
 			overrideJson: {
-				name: "zoo-code-nightly",
-				displayName: "Zoo Code Nightly",
+				name: "kiwi-code-nightly",
+				displayName: "Kiwi Code Nightly",
 				publisher: "ZooCodeOrganization",
 				version: "0.0.1",
 				icon: "assets/icons/icon-nightly.png",
 				scripts: {},
 			},
-			substitution: ["roo-cline", "zoo-code-nightly"],
+			substitution: ["roo-cline", "kiwi-code-nightly"],
 		})
 
 		expect(generatedPackageJson).toStrictEqual({
-			name: "zoo-code-nightly",
-			displayName: "Zoo Code Nightly",
+			name: "kiwi-code-nightly",
+			displayName: "Kiwi Code Nightly",
 			description: "%extension.description%",
 			publisher: "ZooCodeOrganization",
 			version: "0.0.1",
@@ -129,29 +129,29 @@ describe("generatePackageJson", () => {
 				viewsContainers: {
 					activitybar: [
 						{
-							id: "zoo-code-nightly-ActivityBar",
+							id: "kiwi-code-nightly-ActivityBar",
 							title: "%views.activitybar.title%",
 							icon: "assets/icons/icon.svg",
 						},
 					],
 				},
 				views: {
-					"zoo-code-nightly-ActivityBar": [
+					"kiwi-code-nightly-ActivityBar": [
 						{
 							type: "webview",
-							id: "zoo-code-nightly.SidebarProvider",
+							id: "kiwi-code-nightly.SidebarProvider",
 							name: "",
 						},
 					],
 				},
 				commands: [
 					{
-						command: "zoo-code-nightly.plusButtonClicked",
+						command: "kiwi-code-nightly.plusButtonClicked",
 						title: "%command.newTask.title%",
 						icon: "$(edit)",
 					},
 					{
-						command: "zoo-code-nightly.openInNewTab",
+						command: "kiwi-code-nightly.openInNewTab",
 						title: "%command.openInNewTab.title%",
 						category: "%configuration.title%",
 					},
@@ -159,48 +159,48 @@ describe("generatePackageJson", () => {
 				menus: {
 					"editor/context": [
 						{
-							submenu: "zoo-code-nightly.contextMenu",
+							submenu: "kiwi-code-nightly.contextMenu",
 							group: "navigation",
 						},
 					],
-					"zoo-code-nightly.contextMenu": [
+					"kiwi-code-nightly.contextMenu": [
 						{
-							command: "zoo-code-nightly.addToContext",
+							command: "kiwi-code-nightly.addToContext",
 							group: "1_actions@1",
 						},
 					],
 					"editor/title": [
 						{
-							command: "zoo-code-nightly.plusButtonClicked",
+							command: "kiwi-code-nightly.plusButtonClicked",
 							group: "navigation@1",
-							when: "activeWebviewPanelId == zoo-code-nightly.TabPanelProvider",
+							when: "activeWebviewPanelId == kiwi-code-nightly.TabPanelProvider",
 						},
 						{
-							command: "zoo-code-nightly.settingsButtonClicked",
+							command: "kiwi-code-nightly.settingsButtonClicked",
 							group: "navigation@6",
-							when: "activeWebviewPanelId == zoo-code-nightly.TabPanelProvider",
+							when: "activeWebviewPanelId == kiwi-code-nightly.TabPanelProvider",
 						},
 						{
-							command: "zoo-code-nightly.accountButtonClicked",
+							command: "kiwi-code-nightly.accountButtonClicked",
 							group: "navigation@6",
-							when: "activeWebviewPanelId == zoo-code-nightly.TabPanelProvider",
+							when: "activeWebviewPanelId == kiwi-code-nightly.TabPanelProvider",
 						},
 					],
 				},
 				submenus: [
 					{
-						id: "zoo-code-nightly.contextMenu",
+						id: "kiwi-code-nightly.contextMenu",
 						label: "%views.contextMenu.label%",
 					},
 					{
-						id: "zoo-code-nightly.terminalMenu",
+						id: "kiwi-code-nightly.terminalMenu",
 						label: "%views.terminalMenu.label%",
 					},
 				],
 				configuration: {
 					title: "%configuration.title%",
 					properties: {
-						"zoo-code-nightly.allowedCommands": {
+						"kiwi-code-nightly.allowedCommands": {
 							type: "array",
 							items: {
 								type: "string",
@@ -208,7 +208,7 @@ describe("generatePackageJson", () => {
 							default: ["npm test", "npm install", "tsc", "git log", "git diff", "git show"],
 							description: "%commands.allowedCommands.description%",
 						},
-						"zoo-code-nightly.customStoragePath": {
+						"kiwi-code-nightly.customStoragePath": {
 							type: "string",
 							default: "",
 							description: "%settings.customStoragePath.description%",

@@ -11,9 +11,9 @@
 </sub>
 </div>
 
-# Zoo Code'a Katkıda Bulunma
+# Kiwi Code'a Katkıda Bulunma
 
-Zoo Code topluluk tarafından yürütülen bir projedir ve her katkıyı derinden takdir ediyoruz. İşbirliğini kolaylaştırmak için [Önce Sorun Yaklaşımı](#önce-sorun-yaklaşımı) temelinde çalışıyoruz, bu da tüm [Çekme İsteklerinin (PR'ler)](#pull-request-guidelines) önce bir GitHub Sorununa bağlanması gerektiği anlamına gelir. Lütfen bu kılavuzu dikkatlice inceleyin.
+Kiwi Code topluluk tarafından yürütülen bir projedir ve her katkıyı derinden takdir ediyoruz. İşbirliğini kolaylaştırmak için [Önce Sorun Yaklaşımı](#önce-sorun-yaklaşımı) temelinde çalışıyoruz, bu da tüm [Çekme İsteklerinin (PR'ler)](#pull-request-guidelines) önce bir GitHub Sorununa bağlanması gerektiği anlamına gelir. Lütfen bu kılavuzu dikkatlice inceleyin.
 
 ## İçindekiler
 
@@ -54,7 +54,7 @@ Yol haritamız projenin yönünü belirler. Katkılarınızı bu temel hedeflerl
 
 PR'lerinizde bu alanlarla uyumu belirtin.
 
-### 3. Zoo Code topluluğuna katıl
+### 3. Kiwi Code topluluğuna katıl
 
 - **Discord:** [Discord](https://discord.gg/VxfP4Vx3gX) sunucumuza katıl.
 - **Reddit:** [Reddit](https://www.reddit.com/r/ZooCode/) topluluğumuza katıl.
@@ -81,7 +81,7 @@ Tüm katkılar, basit şablonlarımızı kullanarak bir GitHub Sorunu ile başla
 ### Ne Üzerinde Çalışılacağına Karar Verme
 
 - Issue bulmak için [GitHub Issues sayfasına](https://github.com/Zoo-Code-Org/Zoo-Code/issues) bak.
-- Belgeler için [Zoo Code Belgeleri](https://github.com/Zoo-Code-Org/Zoo-Code-Docs)ni ziyaret edin.
+- Belgeler için [Kiwi Code Belgeleri](https://github.com/Zoo-Code-Org/Zoo-Code-Docs)ni ziyaret edin.
 
 ### Hataları Bildirme
 
@@ -89,7 +89,7 @@ Tüm katkılar, basit şablonlarımızı kullanarak bir GitHub Sorunu ile başla
 - Aşağıdakilerle ["Hata Raporu" şablonunu](https://github.com/Zoo-Code-Org/Zoo-Code/issues/new/choose) kullanarak yeni bir hata oluşturun:
     - Açık, numaralandırılmış yeniden oluşturma adımları
     - Beklenen vs gerçek sonuç
-    - Zoo Code sürümü (gerekli); ilgiliyse API sağlayıcısı/modeli
+    - Kiwi Code sürümü (gerekli); ilgiliyse API sağlayıcısı/modeli
 - **Güvenlik sorunları**: [Güvenlik tavsiyeleri](https://github.com/Zoo-Code-Org/Zoo-Code/security/advisories/new) aracılığıyla özel olarak bildirin.
 
 ## Geliştirme ve Gönderme Süreci
@@ -168,4 +168,4 @@ Anlamadığınız veya inceleme sürecinde sürdüremeyeceğiniz YZ tarafından 
 
 ## Yasal
 
-Katkıda bulunarak, katkılarınızın Zoo Code'un lisanslamasıyla tutarlı olan Apache 2.0 Lisansı altında lisanslanacağını kabul etmiş olursunuz.
+Katkıda bulunarak, katkılarınızın Kiwi Code'un lisanslamasıyla tutarlı olan Apache 2.0 Lisansı altında lisanslanacağını kabul etmiş olursunuz.

@@ -1,5 +1,5 @@
 <p align="center">
-          <a href="https://marketplace.visualstudio.com/items?itemName=ZooCodeOrganization.zoo-code"><img src="https://img.shields.io/badge/VS_Code_Marketplace-007ACC?style=flat&logo=visualstudiocode&logoColor=white" alt="VS Code Marketplace"></a>
+          <a href="https://marketplace.visualstudio.com/items?itemName=ZooCodeOrganization.kiwi-code"><img src="https://img.shields.io/badge/VS_Code_Marketplace-007ACC?style=flat&logo=visualstudiocode&logoColor=white" alt="VS Code Marketplace"></a>
           <a href="https://x.com/ZooCodeDev"><img src="https://img.shields.io/badge/ZooCode-000000?style=flat&logo=x&logoColor=white" alt="X"></a>
           <a href="https://youtube.com/@roocodeyt?feature=shared"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube"></a>
           <a href="https://discord.gg/VxfP4Vx3gX"><img src="https://img.shields.io/badge/Join%20Discord-5865F2?style=flat&logo=discord&logoColor=white" alt="Join Discord"></a>
@@ -10,11 +10,11 @@
           <em>Szybko uzyskaj pomoc → <a href="https://discord.gg/VxfP4Vx3gX">Dołącz do Discorda</a> • Wolisz asynchronicznie? → <a href="https://www.reddit.com/r/ZooCode/">Dołącz do r/ZooCode</a></em>
         </p>
 
-        # Zoo Code
+        # Kiwi Code
 
         > Twój zespół deweloperski zasilany AI — prosto w edytorze
 
-        ## Jesteśmy Zoo Code
+        ## Jesteśmy Kiwi Code
 
 > Być może widziałeś [niedawne ogłoszenie](https://x.com/mattrubens/status/2046636598859559114) zespołu Roo 🦘🦘🦘. W skrócie: zespół stopniowo wygasza aktywny rozwój Roo Code, skupiając się na [Roomote](https://roomote.dev/). Ta wiadomość była trudna dla wielu użytkowników Roo; ta wtyczka naprawdę wiele znaczy dla tej społeczności.
 >
@@ -22,13 +22,13 @@
 >
 > Użytkownicy Roo są bardzo różni. Jedni używają go zawodowo na co dzień, inni wykorzystują go do tworzenia niewiarygodnie złożonych workflow. Niektórzy używają go do ulepszania samego Roo, a inni do ulepszania modeli, z których Roo korzysta (super meta). Chodzi o to, że społeczność jest różnorodna, i choć kangur 🦘🦘🦘 jest dostojnym i szlachetnym zwierzęciem, uznaliśmy, że „Zoo” 🐘🦡🦒🦓🦛🦧🦭🦦 lepiej oddaje tę różnorodność użytkowników wtyczki.
 >
-> Dlatego chcemy ogłosić, że **Zoo Code** będzie kontynuować rozwój tego ważnego projektu. Główny zespół tworzą deweloperzy, którzy wcześniej współtworzyli Roo i naprawdę zależy im na tej wtyczce. Będziemy dalej aktualizować modele, naprawiać błędy i wydawać nowe funkcje. Ale przede wszystkim chcemy słuchać was, społeczności, która uczyniła tę wtyczkę tak wyjątkową. Dołącz więc do naszego [Discorda](https://discord.gg/VxfP4Vx3gX), naszego [Reddita](https://www.reddit.com/r/ZooCode) albo [otwórz PR lub issue](https://github.com/Zoo-Code-Org/Zoo-Code); a przede wszystkim prosimy cię, żebyś pozostał zaangażowany, w kontakcie i aktywny jako część społeczności.
+> Dlatego chcemy ogłosić, że **Kiwi Code** będzie kontynuować rozwój tego ważnego projektu. Główny zespół tworzą deweloperzy, którzy wcześniej współtworzyli Roo i naprawdę zależy im na tej wtyczce. Będziemy dalej aktualizować modele, naprawiać błędy i wydawać nowe funkcje. Ale przede wszystkim chcemy słuchać was, społeczności, która uczyniła tę wtyczkę tak wyjątkową. Dołącz więc do naszego [Discorda](https://discord.gg/VxfP4Vx3gX), naszego [Reddita](https://www.reddit.com/r/ZooCode) albo [otwórz PR lub issue](https://github.com/Zoo-Code-Org/Zoo-Code); a przede wszystkim prosimy cię, żebyś pozostał zaangażowany, w kontakcie i aktywny jako część społeczności.
 >
-> _-Zoo Code Team_
+> _-Kiwi Code Team_
 
-## Migracja z Roo Code do Zoo Code
+## Migracja z Roo Code do Kiwi Code
 
-Szybki przewodnik po przejściu z Roo Code do Zoo Code znajdziesz w [przewodniku migracji Roo→Zoo](https://docs.zoocode.dev/roo-to-zoo-migration). Chcemy jak najlepiej pomagać użytkownikom w czasie przejścia i właśnie do tego służą nasze [Reddit](https://www.reddit.com/r/ZooCode) oraz [Discord](https://discord.gg/VxfP4Vx3gX). Jeśli masz problem albo pytanie, wpadaj i pytaj.
+Szybki przewodnik po przejściu z Roo Code do Kiwi Code znajdziesz w [przewodniku migracji Roo→Zoo](https://docs.kiwicode.dev/roo-to-zoo-migration). Chcemy jak najlepiej pomagać użytkownikom w czasie przejścia i właśnie do tego służą nasze [Reddit](https://www.reddit.com/r/ZooCode) oraz [Discord](https://discord.gg/VxfP4Vx3gX). Jeśli masz problem albo pytanie, wpadaj i pytaj.
 
 ## Nowości w v3.66.0
 
@@ -36,7 +36,7 @@ Szybki przewodnik po przejściu z Roo Code do Zoo Code znajdziesz w [przewodniku
 - **Aktualizacja do Semble v0.4.1** — spłaszczony parsing wyników i zlokalizowane komunikaty stanu
 - **Strażnik przejścia stanu cyklu życia zadań** — nowy strażnik przejścia stanu i uzgadnianie delegacji przy uruchomieniu zapobiegają nieprawidłowym przejściom stanu zadań
 
-## Co Zoo Code może zrobić dla CIEBIE?
+## Co Kiwi Code może zrobić dla CIEBIE?
 
 - Generowanie kodu z opisów w języku naturalnym
 - Dostosuj się za pomocą trybów: Kod, Architekt, Zapytaj, Debugowanie i Tryby niestandardowe
@@ -48,7 +48,7 @@ Szybki przewodnik po przejściu z Roo Code do Zoo Code znajdziesz w [przewodniku
 
 ## Tryby
 
-Zoo Code dostosowuje się do Twojego sposobu pracy, a nie odwrotnie:
+Kiwi Code dostosowuje się do Twojego sposobu pracy, a nie odwrotnie:
 
 - Tryb Kod: codzienne kodowanie, edycje i operacje na plikach
 - Tryb Architekt: planowanie systemów, specyfikacji i migracji
@@ -56,7 +56,7 @@ Zoo Code dostosowuje się do Twojego sposobu pracy, a nie odwrotnie:
 - Tryb Debugowanie: śledzenie problemów, dodawanie logów, izolowanie przyczyn źródłowych
 - Tryby niestandardowe: buduj specjalistyczne tryby dla swojego zespołu lub przepływu pracy
 
-Więcej: [Korzystanie z trybów](https://docs.zoocode.dev/basic-usage/using-modes) • [Tryby niestandardowe](https://docs.zoocode.dev/advanced-usage/custom-modes)
+Więcej: [Korzystanie z trybów](https://docs.kiwicode.dev/basic-usage/using-modes) • [Tryby niestandardowe](https://docs.kiwicode.dev/advanced-usage/custom-modes)
 
 ## Filmy instruktażowe i prezentujące funkcje
 
@@ -64,17 +64,17 @@ Więcej: [Korzystanie z trybów](https://docs.zoocode.dev/basic-usage/using-mode
 
 |                                                                                                                                                                            |                                                                                                                                                                            |                                                                                                                                                                              |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <a href="https://www.youtube.com/watch?v=Mcq3r1EPZ-4"><img src="https://img.youtube.com/vi/Mcq3r1EPZ-4/maxresdefault.jpg" width="100%"></a><br><b>Instalacja Zoo Code</b>  | <a href="https://www.youtube.com/watch?v=ZBML8h5cCgo"><img src="https://img.youtube.com/vi/ZBML8h5cCgo/maxresdefault.jpg" width="100%"></a><br><b>Konfiguracja profili</b> | <a href="https://www.youtube.com/watch?v=r1bpod1VWhg"><img src="https://img.youtube.com/vi/r1bpod1VWhg/maxresdefault.jpg" width="100%"></a><br><b>Indeksowanie bazy kodu</b> |
+| <a href="https://www.youtube.com/watch?v=Mcq3r1EPZ-4"><img src="https://img.youtube.com/vi/Mcq3r1EPZ-4/maxresdefault.jpg" width="100%"></a><br><b>Instalacja Kiwi Code</b>  | <a href="https://www.youtube.com/watch?v=ZBML8h5cCgo"><img src="https://img.youtube.com/vi/ZBML8h5cCgo/maxresdefault.jpg" width="100%"></a><br><b>Konfiguracja profili</b> | <a href="https://www.youtube.com/watch?v=r1bpod1VWhg"><img src="https://img.youtube.com/vi/r1bpod1VWhg/maxresdefault.jpg" width="100%"></a><br><b>Indeksowanie bazy kodu</b> |
 | <a href="https://www.youtube.com/watch?v=iiAv1eKOaxk"><img src="https://img.youtube.com/vi/iiAv1eKOaxk/maxresdefault.jpg" width="100%"></a><br><b>Tryby niestandardowe</b> |   <a href="https://www.youtube.com/watch?v=Ho30nyY332E"><img src="https://img.youtube.com/vi/Ho30nyY332E/maxresdefault.jpg" width="100%"></a><br><b>Punkty kontrolne</b>   | <a href="https://www.youtube.com/watch?v=HmnNSasv7T8"><img src="https://img.youtube.com/vi/HmnNSasv7T8/maxresdefault.jpg" width="100%"></a><br><b>Zarządzanie Kontekstem</b> |
 
 </div>
 <p align="center">
-<a href="https://docs.zoocode.dev/tutorial-videos">Więcej szybkich filmów instruktażowych i prezentujących funkcje...</a>
+<a href="https://docs.kiwicode.dev/tutorial-videos">Więcej szybkich filmów instruktażowych i prezentujących funkcje...</a>
 </p>
 
 ## Zasoby
 
-- **[Dokumentacja](https://docs.zoocode.dev):** Oficjalny przewodnik po instalacji, konfiguracji i opanowaniu Zoo Code.
+- **[Dokumentacja](https://docs.kiwicode.dev):** Oficjalny przewodnik po instalacji, konfiguracji i opanowaniu Kiwi Code.
 - **[Kanał YouTube](https://youtube.com/@roocodeyt?feature=shared):** Oglądaj samouczki i zobacz funkcje w akcji.
 - **[Serwer Discord](https://discord.gg/VxfP4Vx3gX):** Dołącz do społeczności, aby uzyskać pomoc i dyskutować w czasie rzeczywistym.
 - **[Społeczność Reddit](https://www.reddit.com/r/ZooCode):** Dziel się swoimi doświadczeniami i zobacz, co budują inni.
@@ -99,13 +99,13 @@ pnpm install
 
 3. **Uruchom rozszerzenie**:
 
-Istnieje kilka sposobów na uruchomienie rozszerzenia Zoo Code:
+Istnieje kilka sposobów na uruchomienie rozszerzenia Kiwi Code:
 
 ### Tryb deweloperski (F5)
 
 Do aktywnego programowania użyj wbudowanego debugowania VSCode:
 
-Naciśnij `F5` (lub przejdź do **Uruchom** → **Rozpocznij debugowanie**) w VSCode. Otworzy to nowe okno VSCode z uruchomionym rozszerzeniem Zoo Code.
+Naciśnij `F5` (lub przejdź do **Uruchom** → **Rozpocznij debugowanie**) w VSCode. Otworzy to nowe okno VSCode z uruchomionym rozszerzeniem Kiwi Code.
 
 - Zmiany w widoku internetowym pojawią się natychmiast.
 - Zmiany w rdzeniu rozszerzenia również zostaną automatycznie przeładowane na gorąco.
@@ -139,10 +139,10 @@ Jeśli wolisz zainstalować pakiet VSIX ręcznie:
     ```sh
     pnpm vsix
     ```
-2.  Plik `.vsix` zostanie wygenerowany w katalogu `bin/` (np. `bin/zoo-code-<version>.vsix`).
+2.  Plik `.vsix` zostanie wygenerowany w katalogu `bin/` (np. `bin/kiwi-code-<version>.vsix`).
 3.  Zainstaluj go ręcznie za pomocą VSCode CLI:
     ```sh
-    code --install-extension bin/zoo-code-<version>.vsix
+    code --install-extension bin/kiwi-code-<version>.vsix
     ```
 
 ---
@@ -153,7 +153,7 @@ Używamy [changesets](https://github.com/changesets/changesets) do wersjonowania
 
 ## Zastrzeżenie
 
-**Uwaga** Zoo Code **nie** składa żadnych oświadczeń ani nie udziela żadnych gwarancji dotyczących jakiegokolwiek kodu, modeli lub innych narzędzi dostarczonych lub udostępnionych w związku z Zoo Code, jakimikolwiek powiązanymi narzędziami stron trzecich ani żadnymi wynikami. Użytkownik przyjmuje na siebie **wszelkie ryzyko** związane z korzystaniem z takich narzędzi lub wyników; takie narzędzia są dostarczane na zasadzie **"TAK JAK JEST"** i **"W MIARĘ DOSTĘPNOŚCI"**. Takie ryzyko może obejmować, bez ograniczeń, naruszenie własności intelektualnej, luki w zabezpieczeniach cybernetycznych lub ataki, stronniczość, niedokładności, błędy, wady, wirusy, przestoje, utratę lub uszkodzenie mienia i/lub obrażenia ciała. Użytkownik ponosi wyłączną odpowiedzialność za korzystanie z takich narzędzi lub wyników (w tym, bez ograniczeń, za ich legalność, stosowność i wyniki).
+**Uwaga** Kiwi Code **nie** składa żadnych oświadczeń ani nie udziela żadnych gwarancji dotyczących jakiegokolwiek kodu, modeli lub innych narzędzi dostarczonych lub udostępnionych w związku z Kiwi Code, jakimikolwiek powiązanymi narzędziami stron trzecich ani żadnymi wynikami. Użytkownik przyjmuje na siebie **wszelkie ryzyko** związane z korzystaniem z takich narzędzi lub wyników; takie narzędzia są dostarczane na zasadzie **"TAK JAK JEST"** i **"W MIARĘ DOSTĘPNOŚCI"**. Takie ryzyko może obejmować, bez ograniczeń, naruszenie własności intelektualnej, luki w zabezpieczeniach cybernetycznych lub ataki, stronniczość, niedokładności, błędy, wady, wirusy, przestoje, utratę lub uszkodzenie mienia i/lub obrażenia ciała. Użytkownik ponosi wyłączną odpowiedzialność za korzystanie z takich narzędzi lub wyników (w tym, bez ograniczeń, za ich legalność, stosowność i wyniki).
 
 ---
 
@@ -165,8 +165,8 @@ Uwielbiamy wkłady społeczności! Zacznij od przeczytania naszego pliku [CONTRI
 
 ## Licencja
 
-[Apache 2.0 © 2025 Zoo Code Org](../../LICENSE)
+[Apache 2.0 © 2025 Kiwi Code Org](../../LICENSE)
 
 ---
 
-**Miłego korzystania z Zoo Code!** Niezależnie od tego, czy trzymasz go na krótkiej smyczy, czy pozwalasz mu działać autonomicznie, nie możemy się doczekać, żeby zobaczyć, co zbudujesz. Jeśli masz pytania albo pomysły na funkcje, otwórz [issue](https://github.com/Zoo-Code-Org/Zoo-Code/issues) albo rozpocznij [discussion](https://github.com/Zoo-Code-Org/Zoo-Code/discussions). Miłego kodowania!
+**Miłego korzystania z Kiwi Code!** Niezależnie od tego, czy trzymasz go na krótkiej smyczy, czy pozwalasz mu działać autonomicznie, nie możemy się doczekać, żeby zobaczyć, co zbudujesz. Jeśli masz pytania albo pomysły na funkcje, otwórz [issue](https://github.com/Zoo-Code-Org/Zoo-Code/issues) albo rozpocznij [discussion](https://github.com/Zoo-Code-Org/Zoo-Code/discussions). Miłego kodowania!

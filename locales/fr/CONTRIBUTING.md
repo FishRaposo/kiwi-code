@@ -11,9 +11,9 @@
 </sub>
 </div>
 
-# Contribuer à Zoo Code
+# Contribuer à Kiwi Code
 
-Zoo Code est un projet communautaire, et nous apprécions profondément chaque contribution. Pour simplifier la collaboration, nous fonctionnons sur une base [d’abord l’issue](#approche-issue-first), ce qui signifie que toutes les [Pull Requests (PRs)](#soumettre-une-pull-request) doivent d’abord être liées à une Issue GitHub. Veuillez lire attentivement ce guide.
+Kiwi Code est un projet communautaire, et nous apprécions profondément chaque contribution. Pour simplifier la collaboration, nous fonctionnons sur une base [d’abord l’issue](#approche-issue-first), ce qui signifie que toutes les [Pull Requests (PRs)](#soumettre-une-pull-request) doivent d’abord être liées à une Issue GitHub. Veuillez lire attentivement ce guide.
 
 ## Table des matières
 
@@ -54,7 +54,7 @@ Notre feuille de route guide la direction du projet. Alignez vos contributions s
 
 Mentionnez l'alignement avec ces domaines dans vos PRs.
 
-### 3. Rejoins la communauté Zoo Code
+### 3. Rejoins la communauté Kiwi Code
 
 - **Discord :** Rejoins notre [Discord](https://discord.gg/VxfP4Vx3gX).
 - **Reddit :** Rejoins notre [Reddit](https://www.reddit.com/r/ZooCode/).
@@ -81,7 +81,7 @@ Toutes les contributions commencent par une Issue GitHub en utilisant nos modèl
 ### Décider sur quoi travailler
 
 - Consulte la [page GitHub Issues](https://github.com/Zoo-Code-Org/Zoo-Code/issues) pour voir les issues.
-- Pour la documentation, visitez [Zoo Code Docs](https://github.com/Zoo-Code-Org/Zoo-Code-Docs).
+- Pour la documentation, visitez [Kiwi Code Docs](https://github.com/Zoo-Code-Org/Zoo-Code-Docs).
 
 ### Signaler des bugs
 
@@ -89,7 +89,7 @@ Toutes les contributions commencent par une Issue GitHub en utilisant nos modèl
 - Créez un nouveau bug en utilisant le [modèle "Rapport de bug"](https://github.com/Zoo-Code-Org/Zoo-Code/issues/new/choose) avec :
     - Des étapes de reproduction claires et numérotées
     - Résultat attendu vs réel
-    - Version de Zoo Code (requise) ; fournisseur/modèle d'API si pertinent
+    - Version de Kiwi Code (requise) ; fournisseur/modèle d'API si pertinent
 - **Problèmes de sécurité** : Signalez-les en privé via les [avis de sécurité](https://github.com/Zoo-Code-Org/Zoo-Code/security/advisories/new).
 
 ## Processus de développement et de soumission
@@ -166,4 +166,4 @@ Veuillez ne pas soumettre de modifications générées par IA que vous ne compre
 
 ## Légal
 
-En contribuant, vous acceptez que vos contributions soient sous licence Apache 2.0, conformément à la licence de Zoo Code.
+En contribuant, vous acceptez que vos contributions soient sous licence Apache 2.0, conformément à la licence de Kiwi Code.
