@@ -1142,7 +1142,8 @@ export class ClineProvider
 			onCreated: this.taskCreationCallback,
 			startTask: options?.startTask ?? true,
 			// Preserve the status from the history item to avoid overwriting it when the task saves messages
-			initialStatus: historyItem.status,
+			// (filter out "interrupted" since Task no longer accepts it as initialStatus)
+			initialStatus: historyItem.status === "interrupted" ? undefined : historyItem.status,
 			rateLimitClock: this.rateLimitClock,
 			diffFuzzyThreshold,
 		})
@@ -3106,6 +3107,9 @@ export class ClineProvider
 			throw new OrganizationAllowListViolationError(t("common:errors.violated_organization_allowlist"))
 		}
 
+		const safeOptions = { ...options }
+		delete (safeOptions as any).initialStatus
+
 		const task = new Task({
 			provider: this,
 			apiConfiguration,
@@ -3124,7 +3128,7 @@ export class ClineProvider
 			// its initial state update, so state.currentTaskId is available ASAP.
 			startTask: false,
 			diffFuzzyThreshold,
-			...options,
+			...safeOptions as any,
 			rateLimitClock: this.rateLimitClock,
 		})
 

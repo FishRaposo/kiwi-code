@@ -455,7 +455,7 @@ describe("Task persistence", () => {
 				taskId: "task-with-advanced-status",
 				task: "test task",
 				startTask: false,
-				initialStatus: "interrupted",
+				initialStatus: "delegated",
 			})
 
 			await (task as Record<string, any>).saveClineMessages()
